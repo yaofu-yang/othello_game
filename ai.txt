@@ -1,0 +1,38 @@
+Computer AI portion:
+
+For this assignment, I originally intended to create an
+AI player with more depth. However, given the time
+constraint, I ended up having the AI just choose a
+random move from the legal moves available during its
+turn. Therefore, my AI is certainly not as "smart" as
+I intended it to be.
+
+Currently, my "pick next move" algorithm simply takes
+the dictionary of legal moves from the Tiles instance
+and randomly chooses one of the available options one
+its turn, returning its coordinates (so that a different
+method can perform the actions of placing a tile onto
+those particular coordinates)
+
+The computer was able to win once during the testing
+stages, although I was carelessly playing simply to
+try and reproduce some bugs I noticed. It was not able
+to win against my brother, who helped test-play the game.
+
+I would like to implement the original ideas I had for
+the AI. AS detailed in the design, I wanted to have the
+AI prioritize claiming the corner pieces, followed by
+the edge pieces. The next priority should be to avoid
+placing any tiles that are two spaces away from the edge.
+The remaining moves will be based on which move can flip
+more of the opponent tiles. In the event of a tie, then
+the AI will choose a random move between the remaining
+choices.
+
+I do think there is room for improvement on these ideas
+as well. After testing the game a bit more, I thought
+that perhaps there are ways to simulate a few possible
+game pathways ahead of the current move, and then
+choose the best pathway that would yield a higher count
+of tile pieces claimed. That being said, this is a very
+naive thought and I had not thought too deeply about it.
